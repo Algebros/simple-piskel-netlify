@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple-piskel-clone</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__menu"><span class="burger-menu"></span></div>
+    <div class="header__title">
+      <h1 class="title">CodeJam - Pallete</h1>
+    </div>
+    <div class="header__properties"><span class="dotted"></span></div>
+  </header>
+
+  <main class="main">
+    <div class="interface">
+
+      <div class="tools">
+        <ul class="tools__size">
+          <li class="item" data-size="1">1</li>
+          <li class="item" data-size="16">16</li>
+          <li class="item" data-size="32">32</li>
+          <li class="item" data-size="64">64</li>
+        </ul>
+
+        <ul class="tools__list">
+          <li class="item pencil" data-tool="pencil">Pencil</li>
+          <li class="item bucket" data-tool="bucket">Paint bucket</li>
+          <li class="item colorSelect" data-tool="colorSelect">selection color</li>
+          <li class="item eraser" data-tool="eraser">Eraser</li>
+          <li class="item stroke" data-tool="stroke">Stroke</li>
+        </ul>
+
+        <ul class="tools__color-picker">
+          <li class="item current-color">
+            <input class="input" type="color">Current color
+          </li>
+          <li class="item prev-color">Prev color</li>
+        </ul>
+      </div>
+
+      <div class="frames">
+        <ul class="frames__list"></ul>
+        <button class="frames__add-frame">Add frame</button>
+        <button class="frames__copy-frame">Copy frame</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div class="add-interface">
+      <div class="animation-player">
+        <canvas width='200' height='200' class="animation-player__frames"></canvas width='100' height='100'>
+        <div class="animation-player__cnt-FPS">
+          <input type="range" name="FPS" id="FPS" min="1" max="24" value="2" class="cnt-FPS">
+          <span class="render-fps"></span>
+        </div>
+      </div>
+      <div class="property">
+        <div class="property__coord"></div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

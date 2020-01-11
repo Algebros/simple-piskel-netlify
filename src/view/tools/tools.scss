@@ -1,0 +1,131 @@
+.interface {
+  display: flex;
+  align-items: center;
+  width: 20%;
+
+  .tools {
+
+    align-self: flex-start;
+
+    &__size {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .item {
+        cursor: pointer;
+        color: grey;
+        line-height: 20px;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 30px;
+        margin-right: 5px;
+
+        &.checked {
+          color: #fff;
+          border: 1px solid yellow;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__list {
+      font-size: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .item {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+
+        &.pencil,
+        &.bucket,
+        &.colorSelect,
+        &.eraser,
+        &.stroke {
+          filter: invert(100%) contrast(0%);
+          cursor: pointer;
+          background-size: 40px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &.pencil {
+          background-image: url('./svg/pen-solid.svg');
+        }
+
+        &.bucket {
+          background-image: url('./svg/fill-solid.svg');
+        }
+
+        &.colorSelect {
+          background-image: url('./svg/eye-dropper-solid.svg');
+        }
+
+        &.eraser {
+          background-image: url('./svg/eraser-solid.svg');
+        }
+
+        &.stroke {
+          background-image: url('./svg/pen-alt-solid.svg');
+        }
+
+        &.checked {
+          filter: invert(100%) contrast(100%);
+          border: 2px solid blue;
+        }
+      }
+    }
+
+    &__color-picker {
+      font-size: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .item {
+        width: 50px;
+        height: 50px;
+        border: 1px solid grey;
+        margin-bottom: 5px;
+
+        .input {
+          width: 100%;
+          height: 100%;
+          border: none;
+          background-color: transparent;
+          padding: 0;
+          margin: 0;
+        }
+
+        .input {
+          -webkit-appearance: none;
+          border: none;
+        }
+        .input::-webkit-color-swatch-wrapper {
+          padding: 0;
+        }
+        .input::-webkit-color-swatch {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .frames {
+    align-self: flex-start;
+
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+}
